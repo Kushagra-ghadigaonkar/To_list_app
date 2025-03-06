@@ -1,0 +1,230 @@
+:root {
+    --background: #000430;
+    --secondaryBackground: #171c48;
+    --text: #fff;
+    --purple: #828dff;
+    --teal: #24feee;
+  }
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family:Roboto;
+}
+body{
+    background-color: var(--background);
+    color: #fff;
+}
+.card1{
+    margin: 65px auto 25px;
+    border: 2px solid var(--purple);
+    max-width: 32%;
+    border-radius: 33px;
+    padding: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+}
+.head{
+    font-size: 35px;
+    font-weight: bold;
+    user-select: none;
+}
+.desc{
+    font-size: 18px;
+    user-select: none;
+}
+.prgressbar{
+    width: 150%;
+    height: 10px;
+    margin-top: 15px;
+    border-radius: 1rem;
+    background-color: #252959;
+}
+.progress{
+    background-color: var(--teal);
+    height: 10px;
+    border-radius: 1rem;
+    width: 0%;
+}
+.countdown{
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    font-weight: bold;
+    background-color: var(--purple);
+    font-size: 30px;
+    display: flex;
+    align-items:center;
+    justify-content: center;
+    user-select: none;
+}
+.section1{
+    padding-top: 10px;
+}
+.section2{
+    text-align: center;
+}
+.card2{
+    margin: 50px auto 25px;
+    max-width: 32%;
+    display: flex;
+    flex-direction: row;
+    justify-content:center;
+    align-items: center;
+}
+.card2 input{
+    border-radius: 20px;
+    border:2px solid var(--purple);
+    outline: none;
+    background: #171b4e;
+    width: 430px;
+    padding: 10px;
+    color:white;
+    cursor: pointer;
+}
+.card2 form{
+    display: flex;
+    flex-direction: row;
+}
+
+.card2 button{
+    width: 50px;
+    height: 50px;
+    margin-left: 10px;
+    background-color: var(--purple);
+    color: white;
+    border-radius: 50%;
+    font-size: 35px;
+    display: flex;
+    border: none;
+    justify-content: center;
+    align-items: center;
+    user-select: none;
+    cursor: pointer;
+}
+
+.chkbox{
+    margin: 20px auto 10px;
+    max-width: 32%;
+    display: flex;
+    flex-direction: column;
+}
+.chkbox li{
+    background-color:#171b4e ;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.icons{
+    display: flex;
+    flex-direction: row;
+}
+.task-item{
+    width: 100%;
+    display: flex;
+    background-color: var(--secondaryBackground);
+    padding :5px;
+    border-radius: 10px;
+    justify-content: space-between;
+    align-items: center;
+}
+.task{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 5px;
+}
+#task1{
+    margin-right: 5px;
+}
+.inputedtask{
+    max-width: 100%;
+    display: flex;
+    flex-direction: row;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    white-space: normal;
+    overflow: hidden;
+    display: block;
+    padding-right: 5px;
+    user-select: none;
+}
+.completed p{
+    text-decoration: line-through;
+    color:var(--teal)
+}
+.edit{
+    width: 25px;
+    height: 25px;
+}
+.bin{
+    width: 25px;
+    height: 25px;
+    margin-left: 10px;
+}
+/* 
+/* Default styles (Desktop-first approach)*/
+
+@media screen and (max-width: 1024px) {
+    .card1, .card2, .chkbox {
+        max-width: 60%;
+    }
+    .countdown {
+        width: 100px;
+        height: 100px;
+        font-size: 24px;
+    }
+    .card2 input {
+        width: 300px;
+    }
+}
+
+/* For Tablets*/
+@media screen and (max-width: 768px) {
+    .card1, .card2, .chkbox {
+        max-width: 80%;
+    }
+    .countdown {
+        width: 90px;
+        height: 90px;
+        font-size: 22px;
+    }
+    .card2 input {
+        width: 250px;
+    }
+}
+
+/*For Mobile Phones*/
+@media screen and (max-width: 480px) {
+    .card1, .card2, .chkbox {
+        max-width: 90%;
+        flex-direction: column;
+        padding: 15px;
+    }
+    .head {
+        font-size: 28px;
+    }
+    .desc {
+        font-size: 14px;
+    }
+    .countdown {
+        width: 80px;
+        height: 80px;
+        font-size: 20px;
+    }
+    .card2 input {
+        width: 80%;
+        font-size: 14px;
+    }
+    .card2 button {
+        width: 40px;
+        height: 40px;
+        font-size: 28px;
+    }
+}
